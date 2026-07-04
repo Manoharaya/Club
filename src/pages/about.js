@@ -34,7 +34,7 @@ export function render(container) {
     </section>
 
     <!-- Mission & Vision Cards Section -->
-    <section class="section-full" style="background-color: var(--color-forest); color: var(--color-white); border-radius: var(--border-radius-lg); margin: 0 2rem 5rem 2rem; padding: 5rem 3rem;">
+    <section class="section-full about-mission-section" style="background-color: var(--color-sage-bg); color: var(--color-forest); border-radius: var(--border-radius-lg); margin: 0 2rem 5rem 2rem; padding: 5rem 3rem;">
       <div style="max-width: 1200px; margin: 0 auto;">
         <div class="mission-grid">
           <div class="mission-card">

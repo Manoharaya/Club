@@ -11,6 +11,7 @@
   --color-forest-dark: #091712;
   --color-sage: #8fa89b;
   --color-sage-dark: #6e887a;
+  --color-sage-bg: #A8C5AB;
   --color-sage-light: #e4ece8;
   --color-gold: #c6a052;
   --color-gold-hover: #b48e3f;
@@ -135,6 +136,8 @@ img {
 .lotus-logo {
   filter: drop-shadow(0 2px 4px rgba(17, 40, 31, 0.1));
   animation: float-logo 6s ease-in-out infinite;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .brand-text {
@@ -500,8 +503,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
-  background-color: var(--color-forest);
+  color: var(--color-forest);
+  background-color: var(--color-sage-bg);
   overflow: hidden;
 }
 
@@ -515,7 +518,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.6) contrast(1.05);
+  filter: brightness(0.9) contrast(1.02);
   animation: zoom-bg 20s infinite alternate;
 }
 
@@ -525,7 +528,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(17, 40, 31, 0.4), rgba(9, 23, 18, 0.9));
+  background: linear-gradient(to bottom, rgba(168, 197, 171, 0.3), rgba(248, 250, 249, 0.9));
   z-index: 2;
 }
 
@@ -542,14 +545,14 @@ img {
   font-size: 1.1rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-hover);
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-title {
   font-size: 4rem;
-  color: var(--color-white);
+  color: var(--color-forest);
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.1;
@@ -561,7 +564,7 @@ img {
   font-family: var(--font-brand);
   font-style: italic;
   font-size: 4.5rem;
-  color: var(--color-sage-light);
+  color: var(--color-sage-dark);
 }
 
 .hero-ctas {
@@ -573,8 +576,8 @@ img {
 
 .btn-secondary-white {
   background: transparent;
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-forest);
+  border: 1px solid var(--color-forest);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -584,8 +587,8 @@ img {
 }
 
 .btn-secondary-white:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--color-white);
+  background: rgba(17, 40, 31, 0.05);
+  border-color: var(--color-forest);
 }
 
 /* About Lotus Teaser (Home) */
@@ -664,15 +667,15 @@ img {
 }
 
 .about-mission-section {
-  background-color: var(--color-forest);
-  color: var(--color-white);
+  background-color: var(--color-sage-bg);
+  color: var(--color-forest);
   padding: 6rem 2rem;
   border-radius: var(--border-radius-lg);
   margin-bottom: 5rem;
 }
 
 .about-mission-section h2, .about-mission-section h3 {
-  color: var(--color-white);
+  color: var(--color-forest);
 }
 
 .mission-grid {
@@ -694,7 +697,7 @@ img {
 }
 
 .mission-card p {
-  color: var(--color-sage-light);
+  color: var(--color-charcoal);
   font-size: 0.95rem;
   font-weight: 300;
 }
@@ -1318,9 +1321,9 @@ img {
 
 .booking-steps-nav {
   display: flex;
-  background-color: var(--color-forest);
-  color: var(--color-white);
-  border-bottom: 1px solid var(--color-forest-light);
+  background-color: var(--color-sage-bg);
+  color: var(--color-forest);
+  border-bottom: 1px solid var(--color-sage-dark);
 }
 
 .booking-step-indicator {
@@ -1342,28 +1345,29 @@ img {
 
 .booking-step-indicator.active {
   opacity: 1;
-  color: var(--color-gold);
-  border-bottom-color: var(--color-gold);
+  color: var(--color-gold-hover);
+  border-bottom-color: var(--color-gold-hover);
 }
 
 .booking-step-indicator.completed {
   opacity: 0.8;
-  color: var(--color-white);
+  color: var(--color-forest);
 }
 
 .booking-step-num {
   width: 20px;
   height: 20px;
   border-radius: var(--border-radius-full);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(17, 40, 31, 0.1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+  color: var(--color-forest);
 }
 
 .booking-step-indicator.active .booking-step-num {
-  background-color: var(--color-gold);
+  background-color: var(--color-gold-hover);
   color: var(--color-white);
 }
 
@@ -2369,8 +2373,8 @@ img {
 
 /* Rewards and Referrals Portal styling */
 .rewards-header {
-  background-color: var(--color-forest);
-  color: var(--color-white);
+  background-color: var(--color-sage-bg);
+  color: var(--color-forest);
   padding: 2.5rem;
   border-radius: var(--border-radius-lg);
   margin-bottom: 2rem;
@@ -2378,7 +2382,7 @@ img {
 }
 
 .rewards-header h3 {
-  color: var(--color-white);
+  color: var(--color-forest);
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
@@ -2481,30 +2485,30 @@ img {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
-  background-color: var(--color-forest);
-  color: var(--color-white);
+  background-color: var(--color-sage-bg);
+  color: var(--color-forest);
   padding: 1.5rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
   width: 280px;
   animation: fade-in-up 0.5s ease-out;
-  border: 1px solid var(--color-forest-light);
+  border: 1px solid var(--color-sage-dark);
 }
 
 .map-card-popup h4 {
-  color: var(--color-white);
+  color: var(--color-forest);
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
 .map-card-popup p {
-  color: var(--color-sage-light);
+  color: var(--color-charcoal);
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 
 .map-card-link {
-  color: var(--color-gold);
+  color: var(--color-gold-hover);
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -2599,10 +2603,10 @@ img {
 }
 /* --- Footer Styling --- */
 .main-footer {
-  background-color: var(--color-forest-dark);
-  color: var(--color-white);
+  background-color: var(--color-sage-bg);
+  color: var(--color-forest);
   padding: 5rem 2rem 2rem 2rem;
-  border-top: 1px solid var(--color-forest-light);
+  border-top: 1px solid var(--color-sage-dark);
 }
 
 .footer-top {
@@ -2621,11 +2625,11 @@ img {
 }
 
 .footer-brand .brand-title {
-  color: var(--color-white);
+  color: var(--color-forest);
 }
 
 .brand-tagline {
-  color: var(--color-sage-light);
+  color: var(--color-charcoal);
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -2639,17 +2643,17 @@ img {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-sage-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-sage-light);
+  color: var(--color-forest);
   transition: var(--transition-fast);
 }
 
 .social-links a:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
+  background-color: var(--color-forest);
+  border-color: var(--color-forest);
   color: var(--color-white);
 }
 
@@ -2670,22 +2674,22 @@ img {
 }
 
 .footer-links a {
-  color: var(--color-sage-light);
+  color: var(--color-forest);
   font-size: 0.95rem;
 }
 
 .footer-links a:hover {
-  color: var(--color-gold);
+  color: var(--color-gold-hover);
 }
 
 .footer-info p {
-  color: var(--color-sage-light);
+  color: var(--color-charcoal);
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
 
 .footer-newsletter p {
-  color: var(--color-sage-light);
+  color: var(--color-charcoal);
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
 }
@@ -2697,11 +2701,11 @@ img {
 
 .newsletter-form input {
   flex-grow: 1;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 40, 31, 0.04);
+  border: 1px solid var(--color-sage-dark);
   padding: 0.65rem 1rem;
   border-radius: var(--border-radius-md);
-  color: var(--color-white);
+  color: var(--color-forest);
   outline: none;
   font-size: 0.9rem;
 }
@@ -2711,7 +2715,7 @@ img {
 }
 
 .newsletter-form button {
-  background-color: var(--color-gold);
+  background-color: var(--color-forest);
   color: var(--color-white);
   border: none;
   padding: 0.65rem 1.25rem;
@@ -2722,7 +2726,7 @@ img {
 }
 
 .newsletter-form button:hover {
-  background-color: var(--color-gold-hover);
+  background-color: var(--color-gold);
 }
 
 .newsletter-msg {
@@ -2731,7 +2735,7 @@ img {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--color-sage-dark);
   padding-top: 2rem;
 }
 
@@ -2742,7 +2746,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: var(--color-grey);
+  color: var(--color-charcoal);
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -2752,7 +2756,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   background-color: rgba(198, 160, 82, 0.1);
-  color: var(--color-gold);
+  color: var(--color-gold-hover);
   border: 1px solid rgba(198, 160, 82, 0.2);
   padding: 0.35rem 0.85rem;
   border-radius: var(--border-radius-full);
@@ -2765,7 +2769,7 @@ img {
 }
 
 .legal-links a:hover {
-  color: var(--color-white);
+  color: var(--color-forest);
 }
 
 /* --- Home AI Promo Card --- */

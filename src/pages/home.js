@@ -69,58 +69,58 @@ export function render(container) {
     </section>
 
     <!-- Experience Pillars (Feature Blocks) -->
-    <section class="section-full" style="background-color: var(--color-forest); color: var(--color-white); text-align: center;">
+    <section class="section-full" style="background-color: var(--color-sage-bg); color: var(--color-forest); text-align: center;">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle" style="color: var(--color-gold);">Sanctuary Zones</span>
-          <h2 class="section-title" style="color: var(--color-white);">Optimise Every Layer of Your Biology</h2>
-          <p class="section-desc" style="color: var(--color-sage-light);">Our state-of-the-art facilities are split into five distinct functional zones.</p>
+          <span class="section-subtitle" style="color: var(--color-gold-hover);">Sanctuary Zones</span>
+          <h2 class="section-title" style="color: var(--color-forest);">Optimise Every Layer of Your Biology</h2>
+          <p class="section-desc" style="color: var(--color-charcoal);">Our state-of-the-art facilities are split into five distinct functional zones.</p>
         </div>
         
         <div class="grid-3" style="margin-top: 4rem;">
           <!-- Card 1 -->
-          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08);">
-            <div class="pillar-icon" style="color: var(--color-gold); margin-bottom: 1.5rem;">
+          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.4); border-color: rgba(255, 255, 255, 0.6);">
+            <div class="pillar-icon" style="color: var(--color-gold-hover); margin-bottom: 1.5rem;">
               <!-- Cold / Snow Icon -->
               <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
               </svg>
             </div>
-            <h3 style="color: var(--color-white); margin-bottom: 1rem; font-size: 1.3rem;">Recovery Zone</h3>
-            <p style="color: var(--color-sage-light); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--color-forest); margin-bottom: 1rem; font-size: 1.3rem;">Recovery Zone</h3>
+            <p style="color: var(--color-charcoal); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
               Contrast therapy via custom 4°C ice baths, full-spectrum infrared saunas, red light pods, and Epsom salt sensory floatation tanks.
             </p>
-            <a href="#/services?zone=recovery" class="btn-read-more" style="color: var(--color-gold); justify-content: center;">Explore Zone &rarr;</a>
+            <a href="#/services?zone=recovery" class="btn-read-more" style="color: var(--color-gold-hover); justify-content: center;">Explore Zone &rarr;</a>
           </div>
 
           <!-- Card 2 -->
-          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08);">
-            <div class="pillar-icon" style="color: var(--color-gold); margin-bottom: 1.5rem;">
+          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.4); border-color: rgba(255, 255, 255, 0.6);">
+            <div class="pillar-icon" style="color: var(--color-gold-hover); margin-bottom: 1.5rem;">
               <!-- Lotus / Mindfulness Icon -->
               <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </div>
-            <h3 style="color: var(--color-white); margin-bottom: 1rem; font-size: 1.3rem;">Wellness Studio</h3>
-            <p style="color: var(--color-sage-light); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--color-forest); margin-bottom: 1rem; font-size: 1.3rem;">Wellness Studio</h3>
+            <p style="color: var(--color-charcoal); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
               Yoga, athletic mobility stretching, breathwork mechanics, and reformer/mat Pilates classes led by master instructors.
             </p>
-            <a href="#/services?zone=studio" class="btn-read-more" style="color: var(--color-gold); justify-content: center;">Explore Zone &rarr;</a>
+            <a href="#/services?zone=studio" class="btn-read-more" style="color: var(--color-gold-hover); justify-content: center;">Explore Zone &rarr;</a>
           </div>
 
           <!-- Card 3 -->
-          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08);">
-            <div class="pillar-icon" style="color: var(--color-gold); margin-bottom: 1.5rem;">
+          <div class="card-glass text-center" style="background: rgba(255, 255, 255, 0.4); border-color: rgba(255, 255, 255, 0.6);">
+            <div class="pillar-icon" style="color: var(--color-gold-hover); margin-bottom: 1.5rem;">
               <!-- Hand Therapy Icon -->
               <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
               </svg>
             </div>
-            <h3 style="color: var(--color-white); margin-bottom: 1rem; font-size: 1.3rem;">Recovery Treatments</h3>
-            <p style="color: var(--color-sage-light); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--color-forest); margin-bottom: 1rem; font-size: 1.3rem;">Recovery Treatments</h3>
+            <p style="color: var(--color-charcoal); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">
               Targeted hands-on physical care: Sports & Deep Tissue Massage, Myotherapy, Physiotherapy, Dry Needling, and Cupping.
             </p>
-            <a href="#/services?zone=treatments" class="btn-read-more" style="color: var(--color-gold); justify-content: center;">Explore Zone &rarr;</a>
+            <a href="#/services?zone=treatments" class="btn-read-more" style="color: var(--color-gold-hover); justify-content: center;">Explore Zone &rarr;</a>
           </div>
         </div>
       </div>
