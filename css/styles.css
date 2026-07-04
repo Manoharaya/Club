@@ -13,6 +13,7 @@
   --color-sage-dark: #6e887a;
   --color-sage-bg: #A8C5AB;
   --color-sage-light: #e4ece8;
+  --color-purple: #6c3b7a;
   --color-gold: #c6a052;
   --color-gold-hover: #b48e3f;
   --color-gold-light: #f6efe0;
@@ -564,7 +565,7 @@ img {
   font-family: var(--font-brand);
   font-style: italic;
   font-size: 4.5rem;
-  color: var(--color-sage-dark);
+  color: var(--color-purple);
 }
 
 .hero-ctas {
