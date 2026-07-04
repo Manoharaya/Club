@@ -128,7 +128,7 @@ export function render(container) {
 
     <!-- AI Wellness Promo -->
     <section class="section" style="padding-bottom: 6rem;">
-      <div class="card-glass" style="background-color: var(--color-white); padding: 4rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+      <div class="card-glass home-ai-promo" style="background-color: var(--color-white);">
         <div>
           <span class="badge-gold">Future-Ready Optimization</span>
           <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Life Science AI Wellness Integration</h2>
@@ -138,7 +138,7 @@ export function render(container) {
           <p style="color: var(--color-grey); margin-bottom: 2rem;">
             As a gold or platinum member, access real-time biometrics, goal tracking dashboards, and continuous smart recommendations to dial in your daily healthspan.
           </p>
-          <div style="display: flex; gap: 1rem;">
+          <div class="home-ai-ctas">
             <a href="#/portal" class="btn-cta">Access AI Dashboard</a>
             <a href="#/timetable" class="btn-secondary-white" style="border-color: var(--color-forest); color: var(--color-forest);">View Class Timetable</a>
           </div>
