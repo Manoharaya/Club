@@ -180,7 +180,7 @@ export const SERVICES = {
           "Promote lymphatic clearance of metabolic waste",
           "Reduce physical and mental stress responses"
         ],
-        details: "Our sports therapists customize every treatment. We offer Deep Tissue Massage for structural release, Trigger Point Therapy for localized spasms, and light Recovery or Relaxation Massage for post-race flushing."
+        details: "Our sports therapists customise every treatment. We offer Deep Tissue Massage for structural release, Trigger Point Therapy for localised spasms, and light Recovery or Relaxation Massage for post-race flushing."
       },
       {
         id: "myotherapy",
@@ -261,12 +261,12 @@ export const SERVICES = {
   },
   performance: {
     title: "Performance Centre",
-    description: "Athletic testing, programming, and monitoring to optimize output and prevent injury.",
+    description: "Athletic testing, programming, and monitoring to optimise output and prevent injury.",
     items: [
       {
         id: "athletic-programs",
         name: "Athletic Recovery Programs",
-        description: "Customized recovery regimens tailored to your training cycle, sports demands, and competitive season.",
+        description: "Customised recovery regimens tailored to your training cycle, sports demands, and competitive season.",
         duration: "Varies",
         price: 150,
         benefits: [
@@ -303,7 +303,7 @@ export const SERVICES = {
           "Accurately calculate aerobic/anaerobic thresholds",
           "Establish precise heart rate training zones",
           "Define baseline physiological stress metrics",
-          "Analyze metabolic substrate utilization",
+          "Analyse metabolic substrate utilisation",
           "Identify aerobic performance bottlenecks"
         ],
         details: "Includes dynamic gas exchange testing (VO2 Max) and blood lactate analysis on a bike or treadmill. Provides a comprehensive breakdown of your metabolic output and custom training zone guidelines."
@@ -312,7 +312,7 @@ export const SERVICES = {
   },
   longevity: {
     title: "Longevity Programs",
-    description: "Biohacking and preventative healthcare designed to optimize lifespan, cognitive function, and daily vitality.",
+    description: "Biohacking and preventative healthcare designed to optimise lifespan, cognitive function, and daily vitality.",
     items: [
       {
         id: "healthy-ageing",
@@ -322,27 +322,27 @@ export const SERVICES = {
         price: 190,
         benefits: [
           "Preserve lean muscle mass and bone mineral density",
-          "Optimize mitochondrial efficiency and energy levels",
+          "Optimise mitochondrial efficiency and energy levels",
           "Reduce cellular senescence and markers of biological age",
           "Improve cognitive longevity and brain health",
           "Maintain independent movement capacity"
         ],
-        details: "This program blends specialized resistance guidelines, cellular recovery therapies (like red light and cold plunges), and nutraceutical coaching to slow down biological aging and extend healthspan."
+        details: "This program blends specialised resistance guidelines, cellular recovery therapies (like red light and cold plunges), and nutraceutical coaching to slow down biological ageing and extend healthspan."
       },
       {
         id: "biohacking",
-        name: "Biohacking Optimization",
-        description: "Leveraging cutting-edge technologies and wearable data analysis to optimize daily biology.",
+        name: "Biohacking Optimisation",
+        description: "Leveraging cutting-edge technologies and wearable data analysis to optimise daily biology.",
         duration: "Ongoing",
         price: 250,
         benefits: [
           "Establish data-driven biological baselines",
           "Structure circadian rhythm and light hygiene protocols",
-          "Optimize sleep architectures (Deep and REM cycles)",
+          "Optimise sleep architectures (Deep and REM cycles)",
           "Enhance daily focus, energy, and executive function",
           "Sync daily routines with biological clocks"
         ],
-        details: "We analyze metrics from your Oura, Whoop, Apple Watch, or continuous glucose monitor (CGM) to build customized protocols for heat/cold exposure, light hacking, breathing, and strategic fasting."
+        details: "We analyse metrics from your Oura, Whoop, Apple Watch, or continuous glucose monitor (CGM) to build customised protocols for heat/cold exposure, light hacking, breathing, and strategic fasting."
       },
       {
         id: "stress-sleep",
@@ -353,7 +353,7 @@ export const SERVICES = {
         benefits: [
           "Increase sleep efficiency and overall duration",
           "Develop techniques to fall asleep quickly",
-          "Optimize parasympathetic nervous system tone",
+          "Optimise parasympathetic nervous system tone",
           "Reduce chronic anxiety and somatic tension",
           "Enhance psychological resilience to work stressors"
         ],
@@ -534,14 +534,14 @@ export const BLOGS = [
   },
   {
     id: "blog-3",
-    title: "Optimizing Your Sleep Architecture: The Key to Cognitive Longevity",
+    title: "Optimising Your Sleep Architecture: The Key to Cognitive Longevity",
     category: "Longevity",
     author: "Marcus Thorne, Sleep Coach",
     date: "June 18, 2026",
     readTime: "7 min read",
     excerpt: "Deep sleep and REM sleep are vital for physical repair and cognitive consolidation. Learn how circadian hygiene, wind-down routines, and magnesium therapy improve sleep quality.",
     content: `
-      <p>Sleep is not a passive state of inactivity; it is a highly active, neuroprotective process essential for life. High-performance individuals often sacrifice sleep, unaware that chronic deprivation damages the brain's glymphatic clearance system, leaving behind metabolic proteins associated with cognitive decline. Real recovery starts with sleep optimization.</p>
+      <p>Sleep is not a passive state of inactivity; it is a highly active, neuroprotective process essential for life. High-performance individuals often sacrifice sleep, unaware that chronic deprivation damages the brain's glymphatic clearance system, leaving behind metabolic proteins associated with cognitive decline. Real recovery starts with sleep optimisation.</p>
       
       <h2>Understanding Sleep Architecture</h2>
       <p>A healthy night of sleep consists of 4 to 6 cycles, each lasting roughly 90 minutes. These cycles transition between Non-Rapid Eye Movement (NREM) sleep—further divided into light sleep and slow-wave (deep) sleep—and Rapid Eye Movement (REM) sleep.</p>
@@ -549,14 +549,14 @@ export const BLOGS = [
       <p><strong>REM Sleep:</strong> Dominating the latter half of the night, REM sleep is the domain of cognitive restoration. This phase consolidates memory, processes emotions, and enhances creative problem-solving.</p>
       
       <h2>Chronobiological Sleep Hacks</h2>
-      <p>To optimize these cycles, you must regulate your circadian rhythm. Here are three immediately actionable guidelines:</p>
+      <p>To optimise these cycles, you must regulate your circadian rhythm. Here are three immediately actionable guidelines:</p>
       <ol>
         <li><strong>Morning Light Exposure:</strong> View 10-15 minutes of direct sunlight within an hour of waking. This halts melatonin production and sets a biological timer for melatonin release 16 hours later.</li>
         <li><strong>Block Blue Light at Night:</strong> After 8:00 PM, dim overhead lights and wear amber glasses to prevent blue-wavelength light from suppressing sleep hormones.</li>
         <li><strong>Thermal Contrast:</strong> Taking a warm sauna or bath 90 minutes before bed raises core temperature, causing a rapid cooling rebound when you exit. A drop in core temperature is the body's primary signal that it is time to sleep.</li>
       </ol>
       
-      <p>Discover customized sleep analysis and thermal protocols at Lotus Health Club to achieve deeper, more refreshing nights.</p>
+      <p>Discover customised sleep analysis and thermal protocols at Lotus Health Club to achieve deeper, more refreshing nights.</p>
     `
   },
   {
@@ -606,7 +606,7 @@ export const EVENTS = [
     instructor: "Dr. Jonathan Cross & Guests",
     price: 495,
     spotsLeft: 8,
-    description: "A two-day immersive experience featuring biomechanical screenings, cellular therapy rotations, sleep optimization seminars, customized longevity meal planning, and restorative yoga."
+    description: "A two-day immersive experience featuring biomechanical screenings, cellular therapy rotations, sleep optimisation seminars, customised longevity meal planning, and restorative yoga."
   },
   {
     id: "event-3",

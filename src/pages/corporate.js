@@ -90,7 +90,7 @@ export function render(container) {
             <span class="section-subtitle">Sanctuary RFP</span>
             <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-forest);">Corporate Consultation</h2>
             <p style="color: var(--color-grey); margin-bottom: 1.5rem;">
-              Register your interest. Our longevity directors will schedule a private discovery call to customize wellness modules according to your team size, budget, and physiological goals.
+              Register your interest. Our longevity directors will schedule a private discovery call to customise wellness modules according to your team size, budget, and physiological goals.
             </p>
             <div style="background-color: var(--color-gold-light); border-radius: var(--border-radius-md); padding: 1.5rem; border-left: 3px solid var(--color-gold); font-size: 0.9rem; color: var(--color-grey); line-height: 1.5;">
               <strong>Note:</strong> Custom corporate rates are calculated starting from 5 employees. Tax incentives apply for corporate health programs under current Australian tax guidelines.

@@ -467,7 +467,7 @@ function renderAIReports(mountPoint, user) {
   let scoreText = 'Needs Recovery';
   if (report.score >= 80) {
     scoreClass = 'good';
-    scoreText = 'Fully Optimized';
+    scoreText = 'Fully Optimised';
   } else if (report.score >= 60) {
     scoreClass = 'warn';
     scoreText = 'Moderate Stress';
@@ -527,7 +527,7 @@ function renderAIReports(mountPoint, user) {
         <!-- Prescriptions Column -->
         <div>
           <h3 style="font-size: 1.1rem; margin-bottom: 1.25rem;">AI Recovery Prescriptions:</h3>
-          <p style="color: var(--color-grey); font-size: 0.9rem; margin-bottom: 1.5rem;">Targeted protocols mapped by Life Science AI to optimize cellular cleansing and systemic stress management.</p>
+          <p style="color: var(--color-grey); font-size: 0.9rem; margin-bottom: 1.5rem;">Targeted protocols mapped by Life Science AI to optimise cellular cleansing and systemic stress management.</p>
           
           <div class="rec-list">
             ${report.recommendations.map(r => `

@@ -30,7 +30,7 @@ export function render(container) {
         </div>
         <div class="about-teaser-content">
           <span class="section-subtitle">Holistic Longevity</span>
-          <h3>A Sanctuary Specially Designed for Human Optimization</h3>
+          <h3>A Sanctuary Specially Designed for Human Optimisation</h3>
           <p>
             At Lotus Health Club, we believe that longevity is not just about lifespan, but healthspan—the quality of the years you live. We unite ancient, grounding physical restoration techniques with cutting-edge medical recovery science.
           </p>
@@ -130,10 +130,10 @@ export function render(container) {
     <section class="section" style="padding-bottom: 6rem;">
       <div class="card-glass home-ai-promo" style="background-color: var(--color-white);">
         <div>
-          <span class="badge-gold">Future-Ready Optimization</span>
+          <span class="badge-gold">Future-Ready Optimisation</span>
           <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Life Science AI Wellness Integration</h2>
           <p style="color: var(--color-grey); margin-bottom: 1.5rem;">
-            Sync your wearables (Apple Health, Garmin, Whoop, Fitbit) to compile a unified biometrics scoreboard. Our advanced machine-learning algorithm evaluates your HRV, resting heart rate, and sleep architecture to auto-generate personalized recovery protocols.
+            Sync your wearables (Apple Health, Garmin, Whoop, Fitbit) to compile a unified biometrics scoreboard. Our advanced machine-learning algorithm evaluates your HRV, resting heart rate, and sleep architecture to auto-generate personalised recovery protocols.
           </p>
           <p style="color: var(--color-grey); margin-bottom: 2rem;">
             As a gold or platinum member, access real-time biometrics, goal tracking dashboards, and continuous smart recommendations to dial in your daily healthspan.

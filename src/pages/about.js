@@ -43,7 +43,7 @@ export function render(container) {
           </div>
           <div class="mission-card">
             <h3>Our Vision</h3>
-            <p>To establish Perth's premier community of longevity-focused individuals, proving that proactive wellness and advanced bio-analytics can dramatically slow biological aging and optimize human capability.</p>
+            <p>To establish Perth's premier community of longevity-focused individuals, proving that proactive wellness and advanced bio-analytics can dramatically slow biological aging and optimise human capability.</p>
           </div>
           <div class="mission-card">
             <h3>Our Philosophy</h3>
