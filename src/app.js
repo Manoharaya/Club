@@ -214,9 +214,14 @@ async function router() {
   } catch (error) {
     console.error("Router error loading page:", path, error);
     container.innerHTML = `
-      <div class="section text-center" style="padding: 100px 20px;">
+      <div class="section text-center" style="padding: 100px 20px; max-width: 800px; margin: 0 auto;">
         <h2>Vexation in the Sanctuary</h2>
         <p style="color: var(--color-red); margin-top: 10px;">An error occurred while preparing this space.</p>
+        <div style="text-align: left; background: #fff5f5; border: 1px solid #ffc1c1; color: #b71c1c; padding: 1.5rem; border-radius: var(--border-radius-md); margin-top: 1.5rem; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.4; white-space: pre-wrap;">
+          <strong>Error [${path}]:</strong> ${error.message}
+          <br><br>
+          ${error.stack || ''}
+        </div>
         <button onclick="window.location.reload()" class="btn-cta" style="margin-top: 20px;">Reload Sanctuary</button>
       </div>
     `;
