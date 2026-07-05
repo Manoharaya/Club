@@ -57,9 +57,9 @@ function renderDirectory(container) {
 
   // Attach interactive tab clicking events
   const tabButtons = container.querySelectorAll('.tab-btn');
-  const servicesGrid = container.getElementById('servicesGrid');
-  const categoryTitle = container.getElementById('categoryTitle');
-  const categoryDesc = container.getElementById('categoryDesc');
+  const servicesGrid = document.getElementById('servicesGrid');
+  const categoryTitle = document.getElementById('categoryTitle');
+  const categoryDesc = document.getElementById('categoryDesc');
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {

@@ -243,9 +243,9 @@ export function render(container) {
   // --- Grab Elements ---
   const indicators = container.querySelectorAll('.booking-step-indicator');
   const panes = container.querySelectorAll('.booking-step-pane');
-  const prevBtn = container.getElementById('prevBtn');
-  const nextBtn = container.getElementById('nextBtn');
-  const wizardActions = container.getElementById('wizardActions');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const wizardActions = document.getElementById('wizardActions');
 
   // Step 1 Click selections
   const serviceItems = container.querySelectorAll('.booking-service-item');
@@ -273,11 +273,11 @@ export function render(container) {
   });
 
   // --- Step 2: Calendar Render & Month navigation ---
-  const prevMonthBtn = container.getElementById('prevMonthBtn');
-  const nextMonthBtn = container.getElementById('nextMonthBtn');
-  const monthTitle = container.getElementById('calendarMonthTitle');
-  const daysContainer = container.getElementById('calendarDaysContainer');
-  const slotsGrid = container.getElementById('slotsGrid');
+  const prevMonthBtn = document.getElementById('prevMonthBtn');
+  const nextMonthBtn = document.getElementById('nextMonthBtn');
+  const monthTitle = document.getElementById('calendarMonthTitle');
+  const daysContainer = document.getElementById('calendarDaysContainer');
+  const slotsGrid = document.getElementById('slotsGrid');
 
   if (prevMonthBtn && nextMonthBtn) {
     prevMonthBtn.addEventListener('click', () => {
@@ -398,7 +398,7 @@ export function render(container) {
 
   // --- Step 3: Checkout summary card calculations ---
   function renderCheckoutSummary() {
-    const summaryCard = container.getElementById('checkoutSummaryCard');
+    const summaryCard = document.getElementById('checkoutSummaryCard');
     if (!summaryCard) return;
 
     const basePrice = selectedItem ? selectedItem.price : 0;
@@ -486,16 +486,16 @@ export function render(container) {
     // Auto-fill form fields if member is logged in
     if (isLoggedIn && user) {
       const names = user.name.split(' ');
-      container.getElementById('checkoutFirstName').value = names[0] || '';
-      container.getElementById('checkoutLastName').value = names.slice(1).join(' ') || '';
-      container.getElementById('checkoutEmail').value = user.email || '';
-      container.getElementById('checkoutPhone').value = user.phone || '';
+      document.getElementById('checkoutFirstName').value = names[0] || '';
+      document.getElementById('checkoutLastName').value = names.slice(1).join(' ') || '';
+      document.getElementById('checkoutEmail').value = user.email || '';
+      document.getElementById('checkoutPhone').value = user.phone || '';
     }
   }
 
   // --- Step 4: Success confirmation screen loader ---
   function renderSuccessConfirmation() {
-    const successView = container.getElementById('successViewBlock');
+    const successView = document.getElementById('successViewBlock');
     if (!successView) return;
 
     const formattedDate = selectedItemType !== 'membership'
@@ -547,9 +547,9 @@ export function render(container) {
     // Save this booking to our local AppState storage!
     if (selectedItemType === 'membership') {
       // If joining a membership, change user status in state
-      const userMail = container.getElementById('checkoutEmail').value;
-      const firstName = container.getElementById('checkoutFirstName').value;
-      const lastName = container.getElementById('checkoutLastName').value;
+      const userMail = document.getElementById('checkoutEmail').value;
+      const firstName = document.getElementById('checkoutFirstName').value;
+      const lastName = document.getElementById('checkoutLastName').value;
       const tierName = selectedItem.id;
       
       appState.login(userMail, `${firstName} ${lastName}`);
@@ -583,7 +583,7 @@ export function render(container) {
       currentStep = 3;
     } else if (currentStep === 3) {
       // Trigger HTML Form Validation
-      const form = container.getElementById('checkoutForm');
+      const form = document.getElementById('checkoutForm');
       if (form && !form.checkValidity()) {
         form.reportValidity();
         return;
