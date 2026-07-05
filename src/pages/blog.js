@@ -1,5 +1,5 @@
 // Blog & Insights Component
-import { BLOGS } from '../data.js';
+import { BLOGS } from "../data.js";
 
 export function render(container, blogId) {
   // If an article ID is requested, render the full post
@@ -13,16 +13,25 @@ export function render(container, blogId) {
 }
 
 function renderGrid(container) {
-  let activeCategory = 'All';
-  const categories = ["All", "Recovery", "Biohacking", "Longevity", "Nutrition", "Athlete Health", "Wellness", "Mental Health"];
+  let activeCategory = "All";
+  const categories = [
+    "All",
+    "Recovery",
+    "Biohacking",
+    "Longevity",
+    "Nutrition",
+    "Athlete Health",
+    "Wellness",
+    "Mental Health",
+  ];
 
   function getFilteredBlogs() {
-    if (activeCategory === 'All') return BLOGS;
-    return BLOGS.filter(b => b.category === activeCategory);
+    if (activeCategory === "All") return BLOGS;
+    return BLOGS.filter((b) => b.category === activeCategory);
   }
 
   function renderBlogCards() {
-    const listGrid = container.querySelector('#blogListGrid');
+    const listGrid = container.querySelector("#blogListGrid");
     if (!listGrid) return;
 
     const filtered = getFilteredBlogs();
@@ -36,7 +45,9 @@ function renderGrid(container) {
       return;
     }
 
-    listGrid.innerHTML = filtered.map(post => `
+    listGrid.innerHTML = filtered
+      .map(
+        (post) => `
       <div class="card-luxury blog-post-card">
         <div class="blog-post-img" style="background-image: url('./assets/${post.id}.png'); background-color: var(--color-sage-light);"></div>
         <div class="blog-post-content">
@@ -52,12 +63,14 @@ function renderGrid(container) {
           </div>
         </div>
       </div>
-    `).join('');
+    `,
+      )
+      .join("");
   }
 
   container.innerHTML = `
     <!-- Header Section -->
-    <section class="section" style="padding-top: 4rem; padding-bottom: 2rem;">
+    <section class="section" style="padding-top: 2rem; ">
       <div class="section-header">
         <span class="section-subtitle">Science & Insights</span>
         <h1 class="section-title">The Longevity Log</h1>
@@ -66,14 +79,18 @@ function renderGrid(container) {
     </section>
 
     <!-- Categories and Grid -->
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section" style="padding-bottom: 2rem;">
       <!-- Category Buttons -->
       <div class="blog-categories" id="blogCatsContainer">
-        ${categories.map(cat => `
-          <button class="blog-cat-btn ${cat === activeCategory ? 'active' : ''}" data-cat="${cat}">
+        ${categories
+          .map(
+            (cat) => `
+          <button class="blog-cat-btn ${cat === activeCategory ? "active" : ""}" data-cat="${cat}">
             ${cat}
           </button>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
 
       <!-- Articles Grid -->
@@ -84,12 +101,12 @@ function renderGrid(container) {
   `;
 
   // Attach button click events to category buttons
-  const catButtons = container.querySelectorAll('.blog-cat-btn');
-  catButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      catButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeCategory = btn.getAttribute('data-cat');
+  const catButtons = container.querySelectorAll(".blog-cat-btn");
+  catButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      catButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeCategory = btn.getAttribute("data-cat");
       renderBlogCards();
     });
   });
@@ -99,7 +116,7 @@ function renderGrid(container) {
 }
 
 function renderBlogPost(container, blogId) {
-  const post = BLOGS.find(b => b.id === blogId);
+  const post = BLOGS.find((b) => b.id === blogId);
 
   if (!post) {
     container.innerHTML = `

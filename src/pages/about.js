@@ -2,7 +2,7 @@
 export function render(container) {
   container.innerHTML = `
     <!-- Header Section -->
-    <section class="section" style="padding-top: 4rem; padding-bottom: 2rem;">
+    <section class="section" style="padding-top: 2rem;">
       <div class="section-header">
         <span class="section-subtitle">Our Heritage</span>
         <h1 class="section-title">The Philosophy of Lotus</h1>
@@ -34,7 +34,7 @@ export function render(container) {
     </section>
 
     <!-- Mission & Vision Cards Section -->
-    <section class="section-full about-mission-section" style="background-color: var(--color-sage-bg); color: var(--color-forest); border-radius: var(--border-radius-lg); margin: 0 2rem 5rem 2rem; padding: 5rem 3rem;">
+    <section class="section-full about-mission-section" style="background-color: var(--color-sage-bg); color: var(--color-forest); border-radius: var(--border-radius-lg); margin: 0 2rem 5rem 2rem; padding: 3rem ;">
       <div style="max-width: 1200px; margin: 0 auto;">
         <div class="mission-grid">
           <div class="mission-card">
@@ -54,7 +54,7 @@ export function render(container) {
     </section>
 
     <!-- Science-Backed Approach Section -->
-    <section class="section" style="margin-bottom: 5rem;">
+    <section class="section" ">
       <div class="grid-2">
         <div style="order: 2;">
           <span class="section-subtitle">Methodology</span>
@@ -106,7 +106,7 @@ export function render(container) {
     </section>
 
     <!-- Meet Our Team Section -->
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section" style="padding-bottom: 3rem;">
       <div class="section-header">
         <span class="section-subtitle">The Experts</span>
         <h2 class="section-title">Meet Our Longevity & Performance Team</h2>

@@ -11,7 +11,7 @@ export function render(container) {
           Perth's Premier Recovery & 
           <span>Longevity Sanctuary</span>
         </h1>
-        <p class="section-desc" style="color: var(--color-sage-light); margin-bottom: 2.5rem; max-width: 700px;">
+        <p class="hero-desc">
           Fusing clinical-grade cold immersion, advanced thermal contrast, photobiomodulation, and dynamic movement studio classes with future-ready AI bio-analytics.
         </p>
         <div class="hero-ctas">
@@ -23,7 +23,7 @@ export function render(container) {
     </section>
 
     <!-- About Lotus Teaser Section -->
-    <section class="section">
+    <section class="section" style="background-color: #e0dfdc; border-radius: var(--border-radius-lg); margin: 3rem auto; padding: 4rem 3rem; box-shadow: var(--shadow-sm);">
       <div class="grid-2">
         <div class="about-teaser-img">
           <div class="about-teaser-img-inner" style="background-image: url('./assets/about_teaser.png'); background-color: var(--color-forest-light);"></div>
@@ -127,7 +127,7 @@ export function render(container) {
     </section>
 
     <!-- AI Wellness Promo -->
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section" style="padding-bottom: 3rem;">
       <div class="card-glass home-ai-promo" style="background-color: var(--color-white);">
         <div>
           <span class="badge-gold">Future-Ready Optimisation</span>

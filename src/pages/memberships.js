@@ -1,10 +1,10 @@
 // Memberships Component
-import { MEMBERSHIPS } from '../data.js';
+import { MEMBERSHIPS } from "../data.js";
 
 export function render(container) {
   container.innerHTML = `
     <!-- Header Section -->
-    <section class="section" style="padding-top: 4rem; padding-bottom: 2rem;">
+    <section class="section" style="padding-top: 4rem; ">
       <div class="section-header">
         <span class="section-subtitle">Membership Plans</span>
         <h1 class="section-title">Invest in Your Healthspan</h1>
@@ -13,16 +13,17 @@ export function render(container) {
     </section>
 
     <!-- Pricing Grid -->
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section" style="padding-bottom: 3rem;">
       <div class="memberships-grid">
-        ${MEMBERSHIPS.map(tier => `
-          <div class="card-luxury membership-card ${tier.popular ? 'popular' : ''}">
-            ${tier.popular ? `<div class="membership-popular-badge">Most Popular</div>` : ''}
+        ${MEMBERSHIPS.map(
+          (tier) => `
+          <div class="card-luxury membership-card ${tier.popular ? "popular" : ""}">
+            ${tier.popular ? `<div class="membership-popular-badge">Most Popular</div>` : ""}
             
             <div class="membership-header">
-              <span class="badge-gold" style="${tier.popular ? 'background-color: var(--color-gold); color: var(--color-white); border-color: var(--color-gold);' : ''}">${tier.badge}</span>
+              <span class="badge-gold" style="${tier.popular ? "background-color: var(--color-gold); color: var(--color-forest-dark); border-color: var(--color-gold);" : ""}">${tier.badge}</span>
               <h2 class="membership-title">${tier.name}</h2>
-              <p style="font-size: 0.9rem; color: ${tier.popular ? 'var(--color-sage-light)' : 'var(--color-grey)'}; margin-bottom: 1.5rem;">${tier.subtitle}</p>
+              <p style="font-size: 0.9rem; color: ${tier.popular ? "var(--color-sage-light)" : "var(--color-grey)"}; margin-bottom: 1.5rem;">${tier.subtitle}</p>
               
               <div class="membership-price">
                 <span class="currency">$</span>
@@ -33,21 +34,26 @@ export function render(container) {
             
             <div class="membership-benefits-title">Included Benefits:</div>
             <ul class="membership-benefits-list">
-              ${tier.benefits.map(b => `
+              ${tier.benefits
+                .map(
+                  (b) => `
                 <li class="membership-benefit-item">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                   <span>${b.text}</span>
                 </li>
-              `).join('')}
+              `,
+                )
+                .join("")}
             </ul>
 
-            <button class="btn-cta btn-membership-join" data-tier="${tier.id}" style="${tier.popular ? 'background-color: var(--color-gold); border-color: var(--color-gold); color: var(--color-white);' : 'background-color: transparent; border-color: var(--color-forest); color: var(--color-forest);'}">
+            <button class="btn-cta btn-membership-join" data-tier="${tier.id}" style="${tier.popular ? "background-color: var(--color-gold); border-color: var(--color-gold); color: var(--color-forest-dark);" : "background-color: transparent; border-color: var(--color-forest); color: var(--color-forest);"}">
               Select ${tier.name} Tier
             </button>
           </div>
-        `).join('')}
+        `,
+        ).join("")}
       </div>
 
       <div class="membership-disclaimer">
@@ -57,7 +63,7 @@ export function render(container) {
     </section>
 
     <!-- FAQ Section -->
-    <section class="section-full" style="background-color: var(--color-grey-light); padding: 5rem 2rem;">
+    <section class="section-full" style="background-color: var(--color-grey-light); padding: 2rem 2rem;">
       <div class="container" style="max-width: 900px;">
         <div class="section-header">
           <span class="section-subtitle">FAQ</span>
@@ -85,11 +91,11 @@ export function render(container) {
   `;
 
   // Attach button event handlers to membership select
-  const joinBtns = container.querySelectorAll('.btn-membership-join');
-  joinBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tierId = btn.getAttribute('data-tier');
-      
+  const joinBtns = container.querySelectorAll(".btn-membership-join");
+  joinBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tierId = btn.getAttribute("data-tier");
+
       // We will redirect to the booking page, pre-selecting membership tier
       window.location.hash = `#/booking?membership=${tierId}`;
     });

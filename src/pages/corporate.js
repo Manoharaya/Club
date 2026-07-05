@@ -1,5 +1,5 @@
 // Corporate Wellness Component
-import { showNotification } from '../app.js';
+import { showNotification } from "../app.js";
 
 export function render(container) {
   container.innerHTML = `
@@ -13,7 +13,7 @@ export function render(container) {
     </section>
 
     <!-- Stats Bar -->
-    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
+    <section class="section" style="padding-top: 0; ">
       <div class="corporate-stats">
         <div>
           <div class="corp-stat-num">120+</div>
@@ -31,7 +31,7 @@ export function render(container) {
     </section>
 
     <!-- Corporate Packages Grid -->
-    <section class="section" style="padding-bottom: 4rem;">
+    <section class="section" >
       <div class="section-header">
         <span class="section-subtitle">Wellness Modules</span>
         <h2>Tailored Corporate Packages</h2>
@@ -83,7 +83,7 @@ export function render(container) {
     </section>
 
     <!-- Corporate Form Section -->
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section" style="padding-bottom: 3rem;">
       <div class="corporate-contact-section">
         <div class="grid-2">
           <div>
@@ -141,10 +141,14 @@ export function render(container) {
   `;
 
   // Attach submit events
-  const corpForm = container.querySelector('#corpInquiryForm');
-  corpForm.addEventListener('submit', (e) => {
+  const corpForm = container.querySelector("#corpInquiryForm");
+  corpForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    showNotification("RFP Submitted", "Corporate inquiry submitted. A team coordinator will contact you in 24 hours.", "success");
+    showNotification(
+      "RFP Submitted",
+      "Corporate inquiry submitted. A team coordinator will contact you in 24 hours.",
+      "success",
+    );
     corpForm.reset();
   });
 }

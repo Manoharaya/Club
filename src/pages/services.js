@@ -1,5 +1,5 @@
 // Services Directory Page Component
-import { SERVICES } from '../data.js';
+import { SERVICES } from "../data.js";
 
 export function render(container, serviceId) {
   // If a specific service ID is requested, render its detail page
@@ -15,10 +15,18 @@ export function render(container, serviceId) {
 function renderDirectory(container) {
   // Check if there is a category selector in URL hash (e.g. ?zone=studio)
   const hash = window.location.hash;
-  let activeTab = 'recovery'; // default
-  
-  if (hash.includes('?zone=')) {
-    activeTab = hash.split('?zone=')[1] || 'recovery';
+  let activeTab = "recovery"; // default
+
+  if (hash.includes("?zone=")) {
+    const zoneParam = hash.split("?zone=")[1] || "recovery";
+    const cleanZone = zoneParam.split("&")[0].split("/")[0];
+    if (SERVICES[cleanZone]) {
+      activeTab = cleanZone;
+    }
+  } else {
+    // If no zone is specified in the URL hash, append ?zone=recovery explicitly
+    const cleanHash = hash.split("?")[0];
+    history.replaceState(null, "", `${cleanHash}?zone=recovery`);
   }
 
   container.innerHTML = `
@@ -30,15 +38,15 @@ function renderDirectory(container) {
       </div>
     </section>
 
-    <section class="section" style="padding-bottom: 6rem;">
+    <section class="section">
       <div class="services-tabs-container">
         <!-- Tabs Navigation -->
         <div class="services-tabs-nav" id="servicesTabsNav">
-          <button class="tab-btn ${activeTab === 'recovery' ? 'active' : ''}" data-category="recovery">Recovery Zone</button>
-          <button class="tab-btn ${activeTab === 'studio' ? 'active' : ''}" data-category="studio">Wellness Studio</button>
-          <button class="tab-btn ${activeTab === 'treatments' ? 'active' : ''}" data-category="treatments">Recovery Treatments</button>
-          <button class="tab-btn ${activeTab === 'performance' ? 'active' : ''}" data-category="performance">Performance Centre</button>
-          <button class="tab-btn ${activeTab === 'longevity' ? 'active' : ''}" data-category="longevity">Longevity Programs</button>
+          <button class="tab-btn ${activeTab === "recovery" ? "active" : ""}" data-category="recovery">Recovery Zone</button>
+          <button class="tab-btn ${activeTab === "studio" ? "active" : ""}" data-category="studio">Wellness Studio</button>
+          <button class="tab-btn ${activeTab === "treatments" ? "active" : ""}" data-category="treatments">Recovery Treatments</button>
+          <button class="tab-btn ${activeTab === "performance" ? "active" : ""}" data-category="performance">Performance Centre</button>
+          <button class="tab-btn ${activeTab === "longevity" ? "active" : ""}" data-category="longevity">Longevity Programs</button>
         </div>
 
         <!-- Dynamic Category Header and Description -->
@@ -56,24 +64,24 @@ function renderDirectory(container) {
   `;
 
   // Attach interactive tab clicking events
-  const tabButtons = container.querySelectorAll('.tab-btn');
-  const servicesGrid = document.getElementById('servicesGrid');
-  const categoryTitle = document.getElementById('categoryTitle');
-  const categoryDesc = document.getElementById('categoryDesc');
+  const tabButtons = container.querySelectorAll(".tab-btn");
+  const servicesGrid = document.getElementById("servicesGrid");
+  const categoryTitle = document.getElementById("categoryTitle");
+  const categoryDesc = document.getElementById("categoryDesc");
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
       // Remove active from all
-      tabButtons.forEach(b => b.classList.remove('active'));
+      tabButtons.forEach((b) => b.classList.remove("active"));
       // Add active to current
-      btn.classList.add('active');
+      btn.classList.add("active");
 
-      const cat = btn.getAttribute('data-category');
-      
+      const cat = btn.getAttribute("data-category");
+
       // Update URL hash without re-routing fully (to preserve states if needed)
       // or update search query params
-      const cleanHash = window.location.hash.split('?')[0];
-      history.pushState(null, '', `${cleanHash}?zone=${cat}`);
+      const cleanHash = window.location.hash.split("?")[0];
+      history.pushState(null, "", `${cleanHash}?zone=${cat}`);
 
       // Update Header block
       categoryTitle.textContent = SERVICES[cat].title;
@@ -87,7 +95,9 @@ function renderDirectory(container) {
 
 function renderCategoryCards(categoryKey) {
   const items = SERVICES[categoryKey].items;
-  return items.map(item => `
+  return items
+    .map(
+      (item) => `
     <div class="card-luxury service-card">
       <div class="service-card-body">
         <div>
@@ -97,12 +107,17 @@ function renderCategoryCards(categoryKey) {
           
           <h4 class="service-benefits-title">Key Physiological Benefits:</h4>
           <ul class="service-benefits-list">
-            ${item.benefits.slice(0, 3).map(b => `
+            ${item.benefits
+              .slice(0, 3)
+              .map(
+                (b) => `
               <li class="service-benefit-item">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 <span>${b}</span>
               </li>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </ul>
         </div>
         
@@ -112,7 +127,9 @@ function renderCategoryCards(categoryKey) {
         </div>
       </div>
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 }
 
 function renderServiceDetail(container, serviceId) {
@@ -121,7 +138,7 @@ function renderServiceDetail(container, serviceId) {
   let targetCategory = null;
 
   for (const catKey in SERVICES) {
-    const found = SERVICES[catKey].items.find(i => i.id === serviceId);
+    const found = SERVICES[catKey].items.find((i) => i.id === serviceId);
     if (found) {
       targetService = found;
       targetCategory = SERVICES[catKey];
@@ -181,7 +198,9 @@ function renderServiceDetail(container, serviceId) {
           <div class="service-detail-benefits">
             <h3>Physiological Benefits & Biomarkers:</h3>
             <div class="service-detail-benefits-grid">
-              ${targetService.benefits.map((b, index) => `
+              ${targetService.benefits
+                .map(
+                  (b, index) => `
                 <div class="service-detail-benefit-card">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   <div>
@@ -189,7 +208,9 @@ function renderServiceDetail(container, serviceId) {
                     <p>${b}</p>
                   </div>
                 </div>
-              `).join('')}
+              `,
+                )
+                .join("")}
             </div>
           </div>
 
